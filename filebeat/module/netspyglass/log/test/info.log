@@ -1,0 +1,7 @@
+2020-10-31 01:14:30,148 INFO  lifecycle-change-5   [.n.s.i.ProdSelfMonitoring]: SELF-MON    (01:14:00 |  +30.15 s); cycle 1489034; starts
+2020-10-31 01:14:30,318 INFO  lifecycle-change-5   [.n.s.i.ProdSelfMonitoring]: SELF-MON    (01:14:00 |  +30.32 s); cycle 1489034; finished in 169.8 ms
+2020-10-31 01:14:36,311 INFO  elastic-12           [h.n.s.SystemEventsExpirer]: SQL db: expire system events with timestamp before 2020-07-23T01:14:36.311474Z
+2020-10-31 01:15:00,010 INFO  commonPool-worker-59 [.h.n.c.w.HeartBeatWatcher]: BEGIN CYCLE (01:15:00 | +10.00 ms); cycle 1489035; ---------------------- [manager, monitor, aggregator, discovery, api] ---- initiator=labdc04a-nsg-api-3 ---- local_cycle=270
+2020-10-31 01:15:00,012 INFO  commonPool-worker-59 [n.m.AreaMonitoringService]: CYCLE       (01:15:00 | +12.00 ms); cycle 1489035; cycle abort timeout in 58.0 sec, regions=[world]
+2020-10-31 01:15:00,013 INFO  commonPool-worker-59 [  n.h.n.n.m.RegionMonitor]: RECV        (01:15:00 | +12.00 ms); cycle 1489035; <- world     : (start cycle): start data collection cycle for region, agent_count=1, total_response_counter=5649, transformers.size=5
+2020-10-31 01:15:01,126 WARN  ion-monitor-world-91 [.c.AgentResponseCollector]: RECV        (01:15:00 |  +1.126 s); cycle 1489035; <- world     : missing: ifInDiscards.4.501

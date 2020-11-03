@@ -1,0 +1,15 @@
+# Module: netspyglass
+# Docs: https://www.elastic.co/guide/en/beats/filebeat/master/filebeat-module-netspyglass.html
+
+- module: netspyglass
+  # All logs
+  log:
+    enabled: true
+
+    # Set custom paths for NetSpyGlass. If left empty,
+    # Filebeat will use /opt/netspyglass
+    #var.netspyglass_home:
+
+    # Set custom paths for the log files. If left empty,
+    # Filebeat will choose /opt/netspyglass/var/logs/*.log*
+    #var.paths:

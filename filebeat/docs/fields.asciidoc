@@ -62,6 +62,7 @@ grouped in the following categories:
 * <<exported-fields-nats>>
 * <<exported-fields-netflow>>
 * <<exported-fields-netscout>>
+* <<exported-fields-netspyglass>>
 * <<exported-fields-nginx>>
 * <<exported-fields-o365>>
 * <<exported-fields-okta>>
@@ -106446,6 +106447,101 @@ type: keyword
 This key captures values or decorators used within a registry entry
 
 type: keyword
+
+--
+
+[[exported-fields-netspyglass]]
+== netspyglass fields
+
+NetSpyGlass Module
+
+
+
+[float]
+=== netspyglass
+
+
+
+
+[float]
+=== log
+
+NetSpyGlass log lines.
+
+
+
+*`netspyglass.log.level`*::
++
+--
+type: alias
+
+alias to: log.level
+
+--
+
+*`netspyglass.log.message`*::
++
+--
+type: alias
+
+alias to: message
+
+--
+
+*`netspyglass.log.component`*::
++
+--
+Component the log is coming from.
+
+
+type: keyword
+
+--
+
+*`netspyglass.log.class`*::
++
+--
+Java class the log is coming from.
+
+
+type: keyword
+
+--
+
+*`netspyglass.log.thread`*::
++
+--
+Thread name the log is coming from.
+
+
+type: keyword
+
+--
+
+[float]
+=== trace
+
+Trace in the log line.
+
+
+
+*`netspyglass.log.trace.class`*::
++
+--
+Java class the trace is coming from.
+
+
+type: keyword
+
+--
+
+*`netspyglass.log.trace.message`*::
++
+--
+Message part of the trace.
+
+
+type: text
 
 --
 

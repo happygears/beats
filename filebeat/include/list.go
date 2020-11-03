@@ -43,6 +43,7 @@ import (
 	_ "github.com/elastic/beats/v7/filebeat/module/mongodb"
 	_ "github.com/elastic/beats/v7/filebeat/module/mysql"
 	_ "github.com/elastic/beats/v7/filebeat/module/nats"
+	_ "github.com/elastic/beats/v7/filebeat/module/netspyglass"
 	_ "github.com/elastic/beats/v7/filebeat/module/nginx"
 	_ "github.com/elastic/beats/v7/filebeat/module/osquery"
 	_ "github.com/elastic/beats/v7/filebeat/module/postgresql"

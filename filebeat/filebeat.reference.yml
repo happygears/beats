@@ -279,6 +279,20 @@ filebeat.modules:
     # Filebeat will choose the paths depending on your OS.
     #var.paths:
 
+#----------------------------- Netspyglass Module -----------------------------
+- module: netspyglass
+  # All logs
+  log:
+    enabled: true
+
+    # Set custom paths for NetSpyGlass. If left empty,
+    # Filebeat will use /opt/netspyglass
+    #var.netspyglass_home:
+
+    # Set custom paths for the log files. If left empty,
+    # Filebeat will choose /opt/netspyglass/var/logs/*.log*
+    #var.paths:
+
 #-------------------------------- Nginx Module --------------------------------
 #- module: nginx
   # Access logs

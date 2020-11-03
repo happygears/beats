@@ -43,6 +43,7 @@ This file is generated! See scripts/docs_collector.py
   * <<filebeat-module-nats>>
   * <<filebeat-module-netflow>>
   * <<filebeat-module-netscout>>
+  * <<filebeat-module-netspyglass>>
   * <<filebeat-module-nginx>>
   * <<filebeat-module-o365>>
   * <<filebeat-module-okta>>
@@ -111,6 +112,7 @@ include::modules/mysql.asciidoc[]
 include::modules/nats.asciidoc[]
 include::modules/netflow.asciidoc[]
 include::modules/netscout.asciidoc[]
+include::modules/netspyglass.asciidoc[]
 include::modules/nginx.asciidoc[]
 include::modules/o365.asciidoc[]
 include::modules/okta.asciidoc[]

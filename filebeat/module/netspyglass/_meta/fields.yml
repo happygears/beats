@@ -1,0 +1,9 @@
+- key: netspyglass
+  title: "netspyglass"
+  description: >
+    NetSpyGlass Module
+  fields:
+    - name: netspyglass
+      type: group
+      description: >
+      fields:
