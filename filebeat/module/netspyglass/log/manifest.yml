@@ -5,7 +5,7 @@ var:
     default: /opt/netspyglass
   - name: paths
     default:
-      - "{{.netspyglass_home}}/var/logs/*.log*"
+      - "{{.netspyglass_home}}/var/logs/*.log"
 
 ingest_pipeline: ingest/pipeline.yml
 input: config/log.yml
