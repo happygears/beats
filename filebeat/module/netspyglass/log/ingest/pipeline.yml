@@ -7,7 +7,7 @@ processors:
     field: message
     trace_match: true
     pattern_definitions:
-      LOG_THREAD : '\S[^\[]+\S'
+      LOG_THREAD: '\S[^\[]+\S'
     patterns:
     - (?m)%{TIMESTAMP_ISO8601:netspyglass.log.timestamp}%{SPACE}%{LOGLEVEL:log.level}%{SPACE}%{LOG_THREAD:netspyglass.log.thread}%{SPACE}\[%{SPACE}%{NOTSPACE:netspyglass.log.class}%{SPACE}\]:%{SPACE}%{GREEDYDATA:message}
 - grok:
@@ -45,17 +45,6 @@ processors:
 - set:
     field: event.kind
     value: event
-- script:
-    lang: painless
-    source: >-
-      def errorLevels = ["ERROR", "FATAL"];
-      if (ctx?.log?.level != null) {
-        if (errorLevels.contains(ctx.log.level)) {
-          ctx.event.type = "error";
-        } else {
-          ctx.event.type = "info";
-        }
-      }
 on_failure:
 - set:
     field: error.log
