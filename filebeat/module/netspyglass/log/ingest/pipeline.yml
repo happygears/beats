@@ -9,7 +9,13 @@ processors:
     pattern_definitions:
       LOG_THREAD : '\S[^\[]+\S'
     patterns:
-    - (?m)%{TIMESTAMP_ISO8601:netspyglass.log.timestamp}%{SPACE}%{LOGLEVEL:log.level}%{SPACE}%{LOG_THREAD:netspyglass.log.thread}%{SPACE}\[%{SPACE}%{JAVACLASS:netspyglass.log.class}%{SPACE}\]:%{SPACE}%{GREEDYDATA:message}
+    - (?m)%{TIMESTAMP_ISO8601:netspyglass.log.timestamp}%{SPACE}%{LOGLEVEL:log.level}%{SPACE}%{LOG_THREAD:netspyglass.log.thread}%{SPACE}\[%{SPACE}%{NOTSPACE:netspyglass.log.class}%{SPACE}\]:%{SPACE}%{GREEDYDATA:message}
+- grok:
+    field: log.file.path
+    pattern_definitions:
+      FILE_BASENAME: '[^./]+'
+    patterns:
+      - (?m)%{UNIXPATH}/%{FILE_BASENAME:netspyglass.log.name}\.log.*
 - rename:
     field: '@timestamp'
     target_field: event.created
