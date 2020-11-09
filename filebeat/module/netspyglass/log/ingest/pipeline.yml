@@ -13,9 +13,9 @@ processors:
 - grok:
     field: log.file.path
     pattern_definitions:
-      FILE_BASENAME: '[^./]+'
+      FILE_BASENAME: '.+'
     patterns:
-      - (?m)%{UNIXPATH}/%{FILE_BASENAME:netspyglass.log.name}\.log.*
+      - ^.*/%{FILE_BASENAME:netspyglass.log.name}\.log
 - rename:
     field: '@timestamp'
     target_field: event.created
